@@ -1,13 +1,13 @@
 
 spring:
   application:
-    name: marca-service
+    name: sueldo-service
   cloud:
     config:
       enabled: true
-      uri: http://localhost:8008
+      uri: http://localhost:8180
   datasource:
-    url: jdbc:mysql://localhost:3306/bdmarcas
+    url: jdbc:mysql://localhost:3306/bdsueldos
     username: root
     password: password
   jpa:
