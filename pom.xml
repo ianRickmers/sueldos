@@ -8,10 +8,10 @@
 		<version>2.7.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>edu.migsw</groupId>
-	<artifactId>marca</artifactId>
+	<groupId>sueldo-service</groupId>
+	<artifactId>sueldo-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>marca</name>
+	<name>sueldo-service</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -50,6 +50,15 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>		
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>

@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("/descuento")
+@CrossOrigin("http://localhost:3000")
 public class DescuentoController {
     
     @Autowired

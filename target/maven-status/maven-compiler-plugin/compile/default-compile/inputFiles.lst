@@ -1,0 +1,16 @@
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/controllers/DescuentoController.java
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/models/HoraExtra.java
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/entities/EmpleadoEntity.java
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/controllers/EmpleadoController.java
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/models/Inasistencia.java
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/models/Marca.java
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/entities/SueldoEntity.java
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/config/RestTemplateConfig.java
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/SueldoApplication.java
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/entities/DescuentoEntity.java
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/repositories/SueldoRepository.java
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/repositories/DescuentoRepository.java
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/controllers/SueldoController.java
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/repositories/EmpleadoRepository.java
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/services/DescuentoService.java
+/home/ianci/Desktop/U/Mingeso/evaluacion 2/sueldos/src/main/java/edu/migsw/sueldo/services/SueldoService.java

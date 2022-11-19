@@ -72,7 +72,7 @@ public class DescuentoService {
         ArrayList<EmpleadoEntity>empleados=(ArrayList<EmpleadoEntity>) empleadoRepository.findAll();
         for(EmpleadoEntity empleado:empleados){
             String rut=empleado.getRut();
-            Marca[] marcasRut=restTemplate.getForObject("http://localhost:8008/marcas/byrut/"+rut, Marca[].class);
+            Marca[] marcasRut=restTemplate.getForObject("http://marca-service/marcas/byrut/"+rut, Marca[].class);
             if(marcasRut==null){
                 return "No se pudo calcular los descuentos";
             }
@@ -92,11 +92,11 @@ public class DescuentoService {
                     descuentoRepository.save(descuento);
                 }
                 String fecha=(marcasRut[i]).getFecha();
-                Integer cantidadInasistencias=restTemplate.getForObject("http://localhost:8009/inasistencias/byrutdate/"+rut+"/"+fecha, Integer.class);
+                Integer cantidadInasistencias=restTemplate.getForObject("http://inasistencia-service/inasistencias/byrutdate/"+rut+"/"+fecha, Integer.class);
                 if(seDebeCrearInasistencia(marcaHora, marcaMinuto) && cantidadInasistencias == 0){
                     Inasistencia inasistencia=new Inasistencia(null,rut,fecha, 0);
                     HttpEntity<Inasistencia> request = new HttpEntity<Inasistencia>(inasistencia);
-                    restTemplate.postForObject("http://localhost:8009/inasistencias", request, Inasistencia.class);
+                    restTemplate.postForObject("http://inasistencia-service/inasistencias", request, Inasistencia.class);
                 }
             }
         }
