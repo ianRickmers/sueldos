@@ -1,7 +1,0 @@
-server.port=8011
-spring.application.name=marca-service
-
-spring.datasource.url=jdbc:mysql://localhost:3306/bdsueldos
-spring.datasource.username=root
-spring.datasource.password=password
-spring.jpa.hibernate.ddl-auto=update
