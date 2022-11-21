@@ -1,8 +1,11 @@
 package edu.migsw.sueldo.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import edu.migsw.sueldo.entities.DescuentoEntity;
 import edu.migsw.sueldo.services.DescuentoService;
 
 import org.springframework.http.ResponseEntity;
@@ -10,11 +13,15 @@ import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("/descuento")
-@CrossOrigin("http://localhost:3000")
 public class DescuentoController {
     
     @Autowired
     DescuentoService DescuentoService;
+
+    @GetMapping("/getall")
+    public ResponseEntity<List<DescuentoEntity>> getAll(){
+        return ResponseEntity.ok(DescuentoService.getAll());
+    }
 
     @GetMapping
     public ResponseEntity<String> calcularDescuentos(){

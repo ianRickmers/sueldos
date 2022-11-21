@@ -10,6 +10,7 @@ import edu.migsw.sueldo.repositories.DescuentoRepository;
 import edu.migsw.sueldo.repositories.EmpleadoRepository;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
@@ -24,6 +25,10 @@ public class DescuentoService {
 
     @Autowired RestTemplate restTemplate;
 
+    public List<DescuentoEntity> getAll() {
+        return descuentoRepository.findAll();
+    }
+    
     private DescuentoEntity cambiarDesc10(DescuentoEntity descuento){
         descuento.setDesc10(descuento.getDesc10()+1);
         return descuento;

@@ -12,4 +12,9 @@ spring:
     password: password
   jpa:
     hibernate:
-      ddl-auto: update  
+      ddl-auto: update
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

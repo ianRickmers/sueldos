@@ -182,7 +182,7 @@ public class SueldoService {
             ArrayList<Integer> bonoAndSueldo=calcularBonificacionTiempoServicio(empleado, sueldo, fechaActual);
             sueldo.setAnosServicio(bonoAndSueldo.get(0));
             sueldo.setBonificacionAnosServicio(bonoAndSueldo.get(1));
-            HoraExtra[] horasExtras=restTemplate.getForObject("http://localhost:8010/horaextra/byrut/"+rut, HoraExtra[].class);
+            HoraExtra[] horasExtras=restTemplate.getForObject("http://horaextra-service/horaextra/byrut/"+rut, HoraExtra[].class);
             if(horasExtras==null)
                 return "No hay horas extras";
             ArrayList<DescuentoEntity> descuentos= descuentoRepository.findByRut(rut);
@@ -192,7 +192,7 @@ public class SueldoService {
                 return "Error leyendo horas extras";
             }
             if (!descuentos.isEmpty()){
-                Integer inasistencias=restTemplate.getForObject("http://localhost:8009/inasistencias/countbyrut/"+rut, Integer.class);
+                Integer inasistencias=restTemplate.getForObject("http://inasistencia-service/inasistencias/countbyrut/"+rut, Integer.class);
                 sueldo=montoDescuentos(inasistencias,descuentos.get(0),sueldo);
             }else{
                 return "Error leyendo descuentos";
